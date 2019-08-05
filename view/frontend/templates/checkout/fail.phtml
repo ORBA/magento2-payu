@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2015 Orba Sp. z o.o. (http://orba.pl)
+ */
+/**
+ * @var $this \Orba\Payupl\Block\Checkout\Fail
+ */
+$paymentUrl = $this->getPaymentUrl();
+?>
+<div class="message info">
+    <div>
+        <?php echo __('There was a problem with payment.'); ?>
+        <?php if ($paymentUrl): ?>
+        <a href="<?php echo $paymentUrl; ?>" title="<?php echo __('Click here to repeat payment.'); ?>"><?php echo __('Click here to repeat payment.'); ?></a>
+        <?php endif; ?>
+    </div>
+</div>
